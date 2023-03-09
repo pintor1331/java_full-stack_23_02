@@ -5,18 +5,20 @@ import java.sql.SQLOutput;
 public class Main {
     public static void main(String[] args) {
         // 프로그램의 시작점
-        int age = 50;
+
+        // 문제 : 아래와 같이 출력해주세요.
+        // 문제 : 단을 * 1000까지 출력해주세요.
+
+        int dan = 8;
 
 
+        int i = 1000; // 초기화
 
-        System.out.println("당신의 나이: " + age);
-
-        // 청년 => 20 <= age <= 34
-        if (age >= 20 && age <= 34) {
-            System.out.println("청년입니다.");
-        } else {
-            System.out.println("청년이 아닙니다.");
+        while (i > 0 /* 조건 */) {
+            System.out.println(dan + " * " + i + " = " + dan * i--); // 출력 & 증가
         }
-        // 프로그램의 끝점X
+
+
+        // 프로그램의 끝점XX
     }
 }
