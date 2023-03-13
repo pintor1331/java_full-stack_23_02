@@ -8,17 +8,36 @@ public class Main {
         // 프로그램의 시작점
         System.out.println("===============================================");
 
-        MallardDuck mallardDuck = new MallardDuck();
-        mallardDuck.fly();
+//        MallardDuck mallardDuck = new MallardDuck();
+//        mallardDuck.fly();
+//
+//        WhiteDuck whiteDuck = new WhiteDuck();
+//        whiteDuck.fly();
+//
+//        RubberDuck rubberDuck = new RubberDuck();
+//        rubberDuck.fly();
+//
+//        JuniorRubberDuck juniorRubberDuck = new JuniorRubberDuck();
+//        juniorRubberDuck.fly();
 
-        WhiteDuck whiteDuck = new WhiteDuck();
-        whiteDuck.fly();
+        String s = "abc";
+        String answer = "";
+        int count = 0;
 
-        RubberDuck rubberDuck = new RubberDuck();
-        rubberDuck.fly();
+        for (int i = 0; i < s.length(); i++) {
+            for (int j = 0; j < s.length(); j++) {
+                if (s.charAt(i) == s.charAt(j)) {
+                    count++;
+                }
+            }
+            if (count == 1) {
+                answer += s.charAt(i);
+            }
 
-        JuniorRubberDuck juniorRubberDuck = new JuniorRubberDuck();
-        juniorRubberDuck.fly();
+            count = 0;
+        }
+
+        System.out.println(answer);
 
 
         // 프로그램의 끝점
