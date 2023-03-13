@@ -1,24 +1,50 @@
 package org.example;
 
 import java.sql.SQLOutput;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
         // 프로그램의 시작점
+        System.out.println("===============================================");
 
-        // 문제 : 아래와 같이 출력해주세요.
-        // 문제 : 단을 * 1000까지 출력해주세요.
+        MallardDuck mallardDuck = new MallardDuck();
+        mallardDuck.fly();
 
-        int dan = 8;
+        WhiteDuck whiteDuck = new WhiteDuck();
+        whiteDuck.fly();
+
+        RubberDuck rubberDuck = new RubberDuck();
+        rubberDuck.fly();
+
+        JuniorRubberDuck juniorRubberDuck = new JuniorRubberDuck();
+        juniorRubberDuck.fly();
 
 
-        int i = 1000; // 초기화
-
-        while (i > 0 /* 조건 */) {
-            System.out.println(dan + " * " + i + " = " + dan * i--); // 출력 & 증가
-        }
-
-
-        // 프로그램의 끝점XX
+        // 프로그램의 끝점
     }
+}
+
+class Duck {
+    void fly() {
+        System.out.println("Duck flies.");
+    }
+}
+
+class MallardDuck extends Duck {
+
+}
+
+class WhiteDuck extends Duck {
+
+}
+
+class RubberDuck extends Duck {
+    void fly() {
+        System.out.println("RubberDuck cannot fly.");
+    }
+}
+
+class JuniorRubberDuck extends RubberDuck {
+
 }
